@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+{% block content %}
+<form action="/data" method='GET' xmlns:color="http://www.w3.org/1999/xhtml">
+    <fieldset>
+        <legend style="font-family: verdana>; color: #5c3c66;">
+            <b>⠀статистика ответов</b>
+        </legend>
+        <p><b>⠀всего на сайте искали</b>: {{ kol }} шт слов</p>
+        <p>⠀они были разной длины. <b>график частоты разных длин слов:</b></p>
+        <p>⠀⠀<img src="{{ url_for('static', filename='graph1.png') }}" width="270" height="200" align=”right”><br><p></p>
+        <p><b>⠀немного статистики базы песен: </b></p>
+        <p>⠀в базе данных сайта: {{ all1 }} песен грейси абрамс, <br>⠀{{ all2 }} песен оливии родриго <br>⠀{{ all3 }} песен тейлор свифт</p>
+        <p>⠀в базе песни разных годов. <b> статистика годов публикации песен:</b></p>
+        <p>⠀⠀<img src="{{ url_for('static', filename='graph2.png') }}" width="300" height="200"><br><p></p>
+    </fieldset>
+</form>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+{% block content %}
+<form action="/statistics" method='GET' xmlns:color="http://www.w3.org/1999/xhtml">
+    <fieldset>
+        <legend style="font-family: verdana>; color: #5c3c66;">
+            <b>⠀результаты вашего последнего запроса</b>
+        </legend>
+        <p><b>⠀введенное слово</b> '{{ num_responses }}'... {{ text }}</p>
+        <p> {{ text2 }}</p>
+        <b>⠀название песни</b>: {{ r_name }} <p></p>
+        <b>⠀исполнительница</b>: {{ r_art }} <p></p>
+        <pre><font style="verdana"><b>⠀текст песни</b>: {{ r_lyrics }}</font></pre>
+        <b>⠀песня была опубликована</b>: {{ r_date }} <p></p>
+        <b>⠀ссылка на genius</b>: {{ r_link }} <p></p>
+    </fieldset>
+</form>
+{% endblock %}

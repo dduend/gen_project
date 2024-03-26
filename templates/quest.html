@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+{% block content %}
+<form action="/questionnaire" method = 'POST'>
+    <fieldset>
+    <legend style="font-family: verdana>; color: #5c3c66;"><b>⠀search for words in lyrics</b></legend>
+        ⠀введите одно слово <b> на английском языке </b> для поиска:
+        <input type="text" id="word" name="word" required pattern='[A-Za-zА]+' style="width: 100px;"><br><p></p>
+        <p>⠀!! вы получите текст песни, в котором встречается точная форма введенного слова, а также: <br>
+            ⠀имя исполнителя, название песни, дату релиза, ссылку на страницу песни на сайте genius <br> <p></p>
+            <i> ⠀↬ если таких песен несколько, вы получите одну из песен рандомно </i><br>
+         ⠀обновите страницу, чтобы увидеть другую рандомную песню с этим словом <br>
+            <i> ⠀↬ если таких песен нет</i>, вы получите <i> рандомный текст песни </i><p></p>
+    <p>⠀<input type="submit" value="найти"></p>
+        <p> ⠀<img src="https://i.pinimg.com/564x/b0/e1/8e/b0e18eede3a25a03850a7991251c010c.jpg" width="50" height="40"/> </p>
+    </fieldset>
+</form>
+{% endblock %}
